@@ -1,0 +1,12 @@
+server:
+  port: 8090
+
+
+spring:
+  data:
+    mongodb:
+      database: sacialmedia
+      username: bilgeadamuser
+      password: '!bilgeadamuser'
+      host: localhost
+      port: 27100
