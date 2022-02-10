@@ -1,6 +1,7 @@
 package com.bilgeadam.mapper;
 
 import com.bilgeadam.dto.request.DoLoginRequestDto;
+import com.bilgeadam.dto.request.ProfileRequestDto;
 import com.bilgeadam.dto.request.RegisterRequestDto;
 import com.bilgeadam.dto.response.DoLoginResponseDto;
 import com.bilgeadam.repository.entitiy.User;
@@ -22,4 +23,5 @@ public interface UserMapper {
 	//Birebir aynı olanların eşleşmesi durumu
 	DoLoginResponseDto toDoLoginResponseDto(User user);
 
+	ProfileRequestDto toProfileRequestDto(RegisterRequestDto dto);
 }

@@ -1,18 +1,18 @@
-package com.bilgeadam.repository.entity;
+package com.bilgeadam.dto.requset;
 
+import com.bilgeadam.repository.entity.Interest;
+import com.bilgeadam.repository.entity.Profile;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+
 
 import java.util.List;
 
 @AllArgsConstructor @NoArgsConstructor @Builder @Data
-@Document
-public class Profile {
-	@Id
+public class ProfileRequestDto {
+
 	String id;
 	long authId;
 	String firstName;
@@ -24,21 +24,22 @@ public class Profile {
 	String gender;
 	String about;
 	List<Interest> ınterest;
-	Education education;
-	Work work;
+	Profile.Education education;
+	Profile.Work work;
 
-	@Document
-	@Data
-	public static class Education{
-		String name;
-		int from;
-		int to;
-		String about;
+
+	class  Education{
+
+			String name;
+			int from;
+			int to;
+			String about;
+
+
 	}
 
-	@Document
-	@Data
-   public static class Work{
+
+	class Work{
 
 		String company;
 		String designation;

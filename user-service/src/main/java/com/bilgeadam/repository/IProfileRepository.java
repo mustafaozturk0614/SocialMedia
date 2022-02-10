@@ -3,7 +3,11 @@ package com.bilgeadam.repository;
 import com.bilgeadam.repository.entity.Profile;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface IProfile extends MongoRepository<Profile,String> {
+import java.util.Optional;
+
+public interface IProfileRepository extends MongoRepository<Profile,String> {
+
+	Optional<Profile> findByAuthId( Long id);
 
 
 }
