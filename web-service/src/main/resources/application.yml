@@ -1,0 +1,6 @@
+server:
+  port: 80
+
+s3:
+  accesskey: "AKIA36DMIDN3FYRSH5PS"
+  secretkey: "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"

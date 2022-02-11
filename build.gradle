@@ -38,6 +38,7 @@ allprojects {
         implementation  libs.lombok
         annotationProcessor libs.lombok
         implementation libs.springOpenFeign
+
         implementation  libs.springValidation
         implementation  libs.openapi
 

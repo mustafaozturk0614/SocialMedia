@@ -42,7 +42,7 @@ public class UserController {
 	@PostMapping(REGİSTER)
 
 
-	public ResponseEntity<Void> register(@RequestBody @Valid RegisterRequestDto dto){
+	public ResponseEntity<String> register(@RequestBody @Valid RegisterRequestDto dto){
 		//1. etapta -> Auth içinde kayıt olmalı
 	 User user=	userService.saveReturnUser(dto);
 
@@ -51,9 +51,9 @@ public class UserController {
 		//ProfileRequestDto profileRequestDto=mapper.toProfileRequestDto(dto);
 		//		profileRequestDto.setAuthId(user.getId());
 		//		profileManager.save(profileRequestDto);
-		profileManager.save(ProfileRequestDto.builder().authId(user.getId()).email(dto.getEmail()).firstName(dto.getName()).
-				lastName(dto.getSurName()).country(dto.getCountry()).gender(dto.getGender()).city(dto.getCity()).build());
-		return  ResponseEntity.ok().build();
+	String id=	profileManager.save(ProfileRequestDto.builder().authId(user.getId()).email(dto.getEmail()).firstName(dto.getName()).
+				lastName(dto.getSurName()).country(dto.getCountry()).gender(dto.getGender()).city(dto.getCity()).build()).getBody();
+		return  ResponseEntity.ok(id);
 
 	}
 	@GetMapping("/findall")
