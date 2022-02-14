@@ -6,15 +6,16 @@ import com.bilgeadam.service.S3ManagerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.File;
+
 import java.io.IOException;
 
-import static java.rmi.server.LogStream.log;
+
 
 @Controller
 @RequestMapping("/")
@@ -22,32 +23,47 @@ import static java.rmi.server.LogStream.log;
 @Slf4j
 public class RegisterController {
 
-	private final AuthServiceManager authServiceManager;
 	private final S3ManagerService s3ManagerService;
 
+	private final AuthServiceManager authServiceManager;
+
+	//http:localhost/register
+	@GetMapping("/register")
+	public ModelAndView register() {
+		return new ModelAndView("register");
+	}
+
+	@PostMapping("/register")
+	public Object register(RegisterRequestDto dto, MultipartFile resim) {
+		ModelAndView model = new ModelAndView();
+		/**
+		 * Üyelik için
+		 * Auth -> ka, şifre
+		 * User -> profil bilgilerini
+		 * ProfileId ver
+		 */
+		String profileId =  authServiceManager.register(RegisterRequestDto.builder()
+																		  .password(dto.getPassword())
+																		  .email(dto.getEmail())
+																		  .surName(dto.getSurName())
+																		  .name(dto.getName())
+																		  .country(dto.getCountry())
+																		  .build()).getBody();
+
+		log.info(profileId);
+		log.info(dto.toString());
+		log.info(resim.getOriginalFilename());
 
 
-	@PostMapping ("register")
-	public Object register(String firstname, String lastname,String email,String password,String country, MultipartFile picture) {
+		try{
 
-	ModelAndView modelAndView=new ModelAndView();
-String profileId=	 authServiceManager.register(RegisterRequestDto.builder().name(firstname).surName(lastname).country(country).password(password).email(email).build()).getBody();
-
-		try {
-
-		s3ManagerService.putObject(profileId+".png",picture);
-			modelAndView.setViewName("login");
-		} catch (IOException e) {
+			s3ManagerService.putObject(profileId+".png",resim);
+			model.setViewName("login");
+		}catch (Exception e){
 			log.error("resim yüklenemedi...: "+e.getMessage());
-			modelAndView.setViewName("register");
-
+			model.setViewName("register");
 		}
-
-
-
-	return  modelAndView;
-
-}
-
+		return model;
+	}
 
 }

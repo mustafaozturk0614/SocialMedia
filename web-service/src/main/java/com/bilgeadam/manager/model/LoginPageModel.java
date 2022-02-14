@@ -1,4 +1,4 @@
-package com.bilgeadam.model;
+package com.bilgeadam.manager.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

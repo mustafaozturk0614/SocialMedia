@@ -1,8 +1,10 @@
 package com.bilgeadam.service;
 
 import com.bilgeadam.dto.request.DoLoginRequestDto;
+import com.bilgeadam.dto.request.FindByAuthIdDto;
 import com.bilgeadam.dto.request.RegisterRequestDto;
 import com.bilgeadam.dto.response.DoLoginResponseDto;
+import com.bilgeadam.manager.ProfileManager;
 import com.bilgeadam.mapper.UserMapper;
 import com.bilgeadam.repository.IUserRepository;
 import com.bilgeadam.repository.entitiy.User;
@@ -18,10 +20,12 @@ public class UserService {
 
 	IUserRepository iUserRepository;
 	UserMapper userMapper;
+	ProfileManager profileManager;
 	@Autowired
-	public UserService(IUserRepository iUserRepository, UserMapper userMapper) {
+	public UserService(IUserRepository iUserRepository, UserMapper userMapper,ProfileManager profileManager) {
 		this.iUserRepository = iUserRepository;
 		this.userMapper = userMapper;
+		this.profileManager=profileManager;
 	}
 
 
@@ -77,5 +81,31 @@ public class UserService {
 		}
 		return false;
 	}
+
+	public DoLoginResponseDto getProfile(DoLoginRequestDto dto){
+		/**
+		 * Kullancı adı ve şifre den auth Db de ki kullanıcıyı arar.
+		 */
+		Optional<User> user =iUserRepository.findByUsernameAndPassword(dto.getUsername(), dto.getPassword());
+		if (user.isPresent()){
+			/**
+			 * Eğer kullanıvı var ise, ProfileController a giderek kişiye ait profil id sini getirecek.             *
+			 */
+			long authid = user.get().getId();
+			String profileid =   profileManager.findByAuthId(FindByAuthIdDto.builder().authid(authid).build()).getBody();
+			/**d
+			 * Eğer dönen değer, "" ise farklı dolu ise farklı işlem yapılacak.
+			 */
+			if (profileid.equals("")){
+				return DoLoginResponseDto.builder().error(500).build();
+			}else{
+				return DoLoginResponseDto.builder().profileId(profileid).error(200).build();
+			}
+		}
+		return DoLoginResponseDto.builder().error(410).build();
+	}
+
+
+
 
 }

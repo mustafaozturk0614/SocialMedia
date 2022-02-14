@@ -10,6 +10,7 @@ public class RestApiUrls {
 	 * Conrtoller kısmında ki map listesi
 	 */
 	public  static  final String PROFİLE="/profile";
+	public  static  final String FINDBYAUTHID="/findbyauthid";
 
 
 	/**

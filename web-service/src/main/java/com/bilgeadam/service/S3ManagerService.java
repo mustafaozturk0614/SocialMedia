@@ -7,6 +7,7 @@ import com.amazonaws.services.s3.*;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectResult;
 import com.bilgeadam.constant.S3Config;
+import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.jni.File;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Service
+@Log4j2
 public class S3ManagerService {
 	@Value("${s3.accesskey}")
 	String S3CONFIG_KEY;
@@ -39,7 +41,10 @@ public class S3ManagerService {
 		ObjectMetadata metadata = new ObjectMetadata();
 		metadata.setContentType("image/png");
 		metadata.setContentLength(file.getSize());
-		return s3client.putObject(S3Config.S3_BUCKET_USER,key,file.getInputStream(),metadata);
+
+			return s3client.putObject(S3Config.S3_BUCKET_USER,key,file.getInputStream(),metadata);
+
+
 	}
 
 }

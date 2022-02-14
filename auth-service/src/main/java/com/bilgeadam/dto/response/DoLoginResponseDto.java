@@ -8,7 +8,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor @NoArgsConstructor @Builder @Data
 public class DoLoginResponseDto {
 
-	long id;
+	String profileId;
 	int status;
+	/**
+	 * 200:Başarılı
+	 * 400:
+	 * */
 
+	int error;
 }

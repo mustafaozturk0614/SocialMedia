@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(VERSION+PROFİLE)
+@RequestMapping(VERSION+USER)
 public class UserController {
 
 
@@ -29,24 +29,16 @@ public class UserController {
 		this.profileManager = profileManager;
 	}
 
-	@PostMapping(DOLOGİN)
-
+	@PostMapping(DOLOGIN)
 	public ResponseEntity<DoLoginResponseDto> doLogin(@RequestBody @Valid DoLoginRequestDto dto){
-
-
-		return ResponseEntity.ok(userService.findByUsernameAndPassword(dto));
-
-
-
+		return ResponseEntity.ok(userService.getProfile(dto));
 	}
-	@PostMapping(REGİSTER)
 
 
+	@PostMapping(REGISTER)
 	public ResponseEntity<String> register(@RequestBody @Valid RegisterRequestDto dto){
 		//1. etapta -> Auth içinde kayıt olmalı
 	 User user=	userService.saveReturnUser(dto);
-
-
 		//2. etapta User-Service e kayıt için istek atmalı ve dönen cevaba göre devam etmeli
 		//ProfileRequestDto profileRequestDto=mapper.toProfileRequestDto(dto);
 		//		profileRequestDto.setAuthId(user.getId());
@@ -56,12 +48,13 @@ public class UserController {
 		return  ResponseEntity.ok(id);
 
 	}
-	@GetMapping("/findall")
+	@GetMapping(FINDALL)
 	public  ResponseEntity<List<User>> findAll(){
 
 		return ResponseEntity.ok(userService.findall());
 
 	}
+
 
 
 }
