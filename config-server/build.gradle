@@ -8,5 +8,6 @@ dependencies {
 
     implementation libs.springCloudConfig
     implementation libs.springCloudStarterConfig
+    implementation libs.springSecurity
 
 }

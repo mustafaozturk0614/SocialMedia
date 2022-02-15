@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import static com.bilgeadam.constant.RestApiUrls.DOLOGIN;
 import static com.bilgeadam.constant.RestApiUrls.REGISTER;
 
-@FeignClient(url = "localhost:8091/v1/user", name = "userServiceFeignClient", decode404 = true)
+@FeignClient(url = "localhost:8091/v1/auth", name = "userServiceFeignClient", decode404 = true)
 public interface AuthServiceManager {
 
 	@PostMapping(REGISTER)

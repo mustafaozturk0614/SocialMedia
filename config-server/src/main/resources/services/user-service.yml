@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  data:
+    mongodb:
+      database: socialmedia
+      username: bilgeadamuser
+      password: '!bilgeadam**'
+      host: 34.116.129.205
+      port: 27017
+
+  zipkin:
+    enabled: true
+    base-url: http://34.116.241.185:9411/
+    service:
+      name: user-server

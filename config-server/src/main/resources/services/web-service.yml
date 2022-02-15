@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+s3:
+  accesskey: ${AWSACCESSKEY}
+  secretkey: ${AWSPASSWORD}
+
+spring:
+  zipkin:
+    enabled: true
+    base-url: http://34.116.241.185:9411/
+    service:
+      name: web-server

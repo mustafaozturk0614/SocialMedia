@@ -1,11 +1,10 @@
-server:
-  port: 8090
-
 spring:
-  data:
-    mongodb:
-      database: socialmedia
-      username: bilgeadamuser
-      password: '!bilgeadam**'
-      host: 34.116.129.205
-      port: 27017
+  cloud:
+    config:
+      username: "${SPRING-SECURITY-NAME}"
+      password: "${SPRING-SECURITY-PASSWORD}"
+  #      uri: "localhost"
+  config:
+    import: "configserver:"
+  application:
+    name: user-service

@@ -8,6 +8,7 @@ ext{
             mapstruct           : "1.4.2.Final",
             springCloud         :'3.1.0',
             aws                  :"1.11.881",
+            springCircuitbreaker :"2.1.0"
 
 
     ]
@@ -20,11 +21,17 @@ ext{
             springDataMongoDb     : "org.springframework.boot:spring-boot-starter-data-mongodb:$versions.springBoot",
             springValidation      : "org.springframework.boot:spring-boot-starter-validation:$versions.springBoot",
             springOpenFeign       : "org.springframework.cloud:spring-cloud-starter-openfeign:$versions.springCloud",
-//            springSecurity        : "org.springframework.boot:spring-boot-starter-security:$versions.springBoot",
+            springSecurity        : "org.springframework.boot:spring-boot-starter-security:$versions.springBoot",
             springCloudConfig     : "org.springframework.cloud:spring-cloud-config-server:$versions.springCloud",
             springCloudStarterConfig: "org.springframework.cloud:spring-cloud-starter-config:$versions.springCloud",
             springCloudClientConfig: "org.springframework.cloud:spring-cloud-config-client:$versions.springCloud",
+            springCloudZipkin     : "org.springframework.cloud:spring-cloud-sleuth-zipkin:$versions.springCloud",
+            springCloudSleuth     : "org.springframework.cloud:spring-cloud-starter-sleuth:$versions.springCloud",
+            springCloudGateway    : "org.springframework.cloud:spring-cloud-starter-gateway:$versions.springCloud",
+            springCloudCircuitbreaker: "org.springframework.cloud:spring-cloud-circuitbreaker-resilience4j:$versions.springCircuitbreaker",
+            springCloudCircuitbreakerReactor: "org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j:$versions.springCircuitbreaker",
             thymeleaf             : "org.springframework.boot:spring-boot-starter-thymeleaf:$versions.springBoot",
+
             postgresql            : "org.postgresql:postgresql:$versions.postgresql",
             lombok                : "org.projectlombok:lombok:$versions.lombok",
             openapi               : "org.springdoc:springdoc-openapi-ui:$versions.openapi",

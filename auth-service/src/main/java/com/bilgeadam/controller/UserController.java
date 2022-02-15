@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(VERSION+USER)
+@RequestMapping(VERSION+AUTH)
 public class UserController {
 
 
