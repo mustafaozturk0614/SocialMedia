@@ -4,17 +4,17 @@ spring:
   main:
     web-application-type: reactive
   zipkin:
-      enabled: true
-      base-url: http://34.118.92.201:9411/
-      service:
-        name: api-gateway-server
-  application:
+    enabled: true
+    base-url: http://34.116.241.185:9411/
+    service:
       name: api-gateway-service
+  application:
+    name: api-gateway-service
   cloud:
     gateway:
       routes:
         - id: auth-service
-          uri: http://192.168.1.21:8091
+          uri: ${MY-IP-ADDRESS}:8091
           predicates:
             - Path=/v1/auth/**
           filters:
@@ -22,8 +22,61 @@ spring:
               args:
                 enabled: true
                 fallbackUri: forward:/fallback
+        - id: user-service-follow
+          uri: ${MY-IP-ADDRESS}:8090
+          predicates:
+            - Path=/v1/follow/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                enabled: true
+                fallbackUri: forward:/fallback
+        - id: user-service-post
+          uri: ${MY-IP-ADDRESS}:8090
+          predicates:
+            - Path=/v1/post/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                enabled: true
+                fallbackUri: forward:/fallback
+        - id: user-service-user
+          uri: ${MY-IP-ADDRESS}:8090
+          predicates:
+            - Path=/v1/user/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                enabled: true
+                fallbackUri: forward:/fallback
+        - id: user-service-profile
+          uri: ${MY-IP-ADDRESS}:8090
+          predicates:
+            - Path=/v1/profile/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                enabled: true
+                fallbackUri: forward:/fallback
+
+        - id: web-service
+          uri: ${MY-IP-ADDRESS}:80
+          predicates:
+            - Path=/web/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                enabled: true
+                fallbackUri: forward:/fallback
+            - RewritePath=/web/?(?<segment>.*), /$\{segment}
 
 
 
-
+logging:
+  level:
+    root: warn
+    org.springframework.boot: info
+    com.bilgeadam: debug
+  file:
+    name: apigatewayservice.log
 

@@ -5,6 +5,8 @@ import com.bilgeadam.dto.request.ProfileRequestDto;
 import com.bilgeadam.dto.request.RegisterRequestDto;
 import com.bilgeadam.dto.response.DoLoginResponseDto;
 import com.bilgeadam.manager.ProfileManager;
+import com.bilgeadam.rabbitmq.model.Notification;
+import com.bilgeadam.rabbitmq.producer.UserServiceProducer;
 import com.bilgeadam.repository.entitiy.User;
 import com.bilgeadam.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +24,13 @@ public class UserController {
 
 	UserService userService;
 	ProfileManager profileManager;
+	UserServiceProducer userServiceProducer;
 
 	@Autowired
-	public UserController(UserService userService, ProfileManager profileManager) {
+	public UserController(UserService userService, ProfileManager profileManager,UserServiceProducer userServiceProducer) {
 		this.userService = userService;
 		this.profileManager = profileManager;
+		this.userServiceProducer=userServiceProducer;
 	}
 
 	@PostMapping(DOLOGIN)
@@ -54,7 +58,13 @@ public class UserController {
 		return ResponseEntity.ok(userService.findall());
 
 	}
-
+	@PostMapping("/sendmessage")
+	public ResponseEntity<Void> sendMessage(String message){
+		userServiceProducer.sendMessage(Notification.builder()
+													.message(message)
+													.build());
+		return ResponseEntity.ok().build();
+	}
 
 
 }

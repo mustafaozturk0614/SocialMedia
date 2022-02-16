@@ -8,6 +8,7 @@ buildscript {
         implementation libs.postgresql
         implementation  libs.springDataJpa
         implementation libs.springCloudClientConfig
+        implementation libs.springAmqp
     }
 
 

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(VERSION+PROFİLE)
+@RequestMapping(VERSION+PROFILE)
 @RequiredArgsConstructor
 public class ProfileController {
 

@@ -4,6 +4,8 @@ spring:
       username: "${SPRING-SECURITY-NAME}"
       password: "${SPRING-SECURITY-PASSWORD}"
   #      uri: "localhost"
+
+
   config:
     import: "configserver:"
   application:

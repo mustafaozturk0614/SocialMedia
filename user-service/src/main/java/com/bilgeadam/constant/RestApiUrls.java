@@ -6,11 +6,15 @@ public class RestApiUrls {
 	 */
 	public  static  final String VERSION="/v1";
 
+
 	/**
 	 * Conrtoller kısmında ki map listesi
 	 */
-	public  static  final String PROFİLE="/profile";
-	public  static  final String FINDBYAUTHID="/findbyauthid";
+	public static final String PROFILE = "/profile";
+	public static final String USER = "/user";
+	public static final String FOLLOW = "/follow";
+	public static final String POST = "/post";
+
 
 
 	/**
@@ -23,6 +27,7 @@ public class RestApiUrls {
 	public static final String GETALL= "/getall";
 	public static final String FINDBYID= "/findbyid";
 	public static final String FINDBYNAME= "/findbyname";
+	public  static  final String FINDBYAUTHID="/findbyauthid";
 	/**
 	 * controller a özel
 	 */

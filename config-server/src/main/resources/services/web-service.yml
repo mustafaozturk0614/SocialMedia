@@ -6,8 +6,20 @@ s3:
   secretkey: ${AWSPASSWORD}
 
 spring:
+  security:
+    user:
+      name: admin
+      password: root
   zipkin:
     enabled: true
     base-url: http://34.116.241.185:9411/
     service:
       name: web-server
+
+logging:
+  level:
+    root: warn
+    org.springframework.boot: info
+    com.bilgeadam: debug
+  file:
+    name: webservice.log

@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 
-
+import static com.bilgeadam.constant.RestApiUrls.*;
 
 @Controller
 @RequestMapping("/")

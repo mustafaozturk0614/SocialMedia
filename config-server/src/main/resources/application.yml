@@ -1,5 +1,7 @@
 server:
   port: 8888
+
+
 spring:
   security:
     user:
@@ -20,3 +22,13 @@ spring:
     service:
       name: config-server
 
+
+
+
+logging:
+  level:
+    root: warn
+    org.springframework.boot: info
+    com.bilgeadam: debug
+  file:
+    name: configservice.log
