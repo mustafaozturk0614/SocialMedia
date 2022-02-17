@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: deploymentpostgresql
+        loadbalancer: loadpods
 
     spec:
       containers:

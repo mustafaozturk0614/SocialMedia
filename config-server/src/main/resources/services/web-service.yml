@@ -1,18 +1,18 @@
 server:
-  port: 80
+  port: ${web_service_spring_port}
 
 s3:
-  accesskey: ${AWSACCESSKEY}
-  secretkey: ${AWSPASSWORD}
+  accesskey: ${aws_access_key}
+  secretkey: ${aws_secret_key}
 
 spring:
   security:
     user:
-      name: admin
-      password: root
+      name: ${spirng_security_name}
+      password: ${spirng_security_password}
   zipkin:
     enabled: true
-    base-url: http://34.116.241.185:9411/
+    base-url: ${zipkin_base_url}
     service:
       name: web-server
 

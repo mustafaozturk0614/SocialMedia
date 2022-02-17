@@ -1,12 +1,10 @@
 server:
-  port: 8888
-
-
+  port: ${config_service_spring_port}
 spring:
   security:
     user:
-      name: ${SPRING-SECURITY-NAME}
-      password: ${SPRING-SECURITY-PASSWORD}
+      name: ${spirng_security_name}
+      password: ${spirng_security_password}
   application:
     name: config-server
   profiles:
@@ -18,7 +16,7 @@ spring:
           search-locations: classpath:/services
   zipkin:
     enabled: true
-    base-url: http://34.116.241.185:9411/
+    base-url: ${zipkin_base_url}
     service:
       name: config-server
 

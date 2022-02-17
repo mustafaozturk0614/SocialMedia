@@ -20,10 +20,28 @@ public class RabbitMQConfiguration {
     private String routingKeyCreateUser = "routingKeyCreateUSer";
     private String queueNameCreateUser = "queueCreateUser";
 
+    private String routingKeyDeleteUser = "routingKeyDeleteUser";
+    private String queueNameDeleteUser = "queueDeleteUser";
+
+    private String routingProfileKey = "elastic-key-profile-save";
+    private String queueProfileSave = "profile-save-queue";
+
+    @Bean
+    Queue queueProfileSave(){
+        return new Queue(queueProfileSave);
+    }
+
+
     @Bean
     Queue queue(){
         return new Queue(queueNameCreateUser);
     }
+
+    @Bean
+    Queue queueDelete(){
+        return new Queue(queueNameDeleteUser);
+    }
+
 
     @Bean
     DirectExchange directExchange(){
@@ -31,8 +49,18 @@ public class RabbitMQConfiguration {
     }
 
     @Bean
-    public Binding binding(final Queue queue, final DirectExchange directExchange){
+    public Binding binding(final Queue queue,final DirectExchange directExchange){
         return BindingBuilder.bind(queue).to(directExchange).with(routingKeyCreateUser);
+    }
+
+    @Bean
+    public Binding bindingDelete(final Queue queueDelete,final DirectExchange directExchange){
+        return BindingBuilder.bind(queueDelete).to(directExchange).with(routingKeyDeleteUser);
+    }
+
+    @Bean
+    public Binding bindingProfile(final Queue queueProfileSave,final DirectExchange directExchange){
+        return BindingBuilder.bind(queueProfileSave).to(directExchange).with(routingProfileKey);
     }
 
 }

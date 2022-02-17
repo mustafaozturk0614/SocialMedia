@@ -3,7 +3,7 @@ server:
 
 spring:
   rabbitmq:
-    host: 34.116.240.199
+    host: 34.134.25.134
     port: 5672
     username: BilgeAdamAdmin
     password: BilgeAdam!**
@@ -12,12 +12,12 @@ spring:
       database: socialmedia
       username: bilgeadamuser
       password: '!bilgeadam**'
-      host: 34.116.129.205
+      host: 35.188.98.234
       port: 27017
 
   zipkin:
     enabled: true
-    base-url: http://34.116.241.185:9411/
+    base-url:  http://34.134.25.134:9411/
     service:
       name: user-server
 

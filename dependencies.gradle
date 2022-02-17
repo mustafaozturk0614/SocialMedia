@@ -1,28 +1,26 @@
 ext{
-    versions=[
+    versions = [
             springBoot          : "2.6.3",
+            springCloud         : "3.1.0",
+            springCircuitbreaker: "2.1.0",
             postgresql          : "42.3.2",
             lombok              : "1.18.22",
-            validation          : "2.6.3",
             openapi             : "1.6.5",
             mapstruct           : "1.4.2.Final",
-            springCloud         :'3.1.0',
-            aws                  :"1.11.881",
-            springCircuitbreaker :"2.1.0"
-
-
+            aws                 : "1.12.156",
+            springGraphql       : "12.0.0",
+            springGraphiql      : "11.1.0"
     ]
-
-
 
     libs = [
             springBootWeb         : "org.springframework.boot:spring-boot-starter-web:$versions.springBoot",
             springDataJpa         : "org.springframework.boot:spring-boot-starter-data-jpa:$versions.springBoot",
             springDataMongoDb     : "org.springframework.boot:spring-boot-starter-data-mongodb:$versions.springBoot",
             springValidation      : "org.springframework.boot:spring-boot-starter-validation:$versions.springBoot",
-            springAmqp            : "org.springframework.boot:spring-boot-starter-amqp:$versions.springBoot",
-            springOpenFeign       : "org.springframework.cloud:spring-cloud-starter-openfeign:$versions.springCloud",
             springSecurity        : "org.springframework.boot:spring-boot-starter-security:$versions.springBoot",
+            springAmqp            : "org.springframework.boot:spring-boot-starter-amqp:$versions.springBoot",
+            springElasticSearch   : "org.springframework.boot:spring-boot-starter-data-elasticsearch:$versions.springBoot",
+            springOpenFeign       : "org.springframework.cloud:spring-cloud-starter-openfeign:$versions.springCloud",
             springCloudConfig     : "org.springframework.cloud:spring-cloud-config-server:$versions.springCloud",
             springCloudStarterConfig: "org.springframework.cloud:spring-cloud-starter-config:$versions.springCloud",
             springCloudClientConfig: "org.springframework.cloud:spring-cloud-config-client:$versions.springCloud",
@@ -32,15 +30,16 @@ ext{
             springCloudCircuitbreaker: "org.springframework.cloud:spring-cloud-circuitbreaker-resilience4j:$versions.springCircuitbreaker",
             springCloudCircuitbreakerReactor: "org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j:$versions.springCircuitbreaker",
             thymeleaf             : "org.springframework.boot:spring-boot-starter-thymeleaf:$versions.springBoot",
-
             postgresql            : "org.postgresql:postgresql:$versions.postgresql",
             lombok                : "org.projectlombok:lombok:$versions.lombok",
             openapi               : "org.springdoc:springdoc-openapi-ui:$versions.openapi",
-            mapstruct             :"org.mapstruct:mapstruct:$versions.mapstruct",
+            mapstruct             : "org.mapstruct:mapstruct:$versions.mapstruct",
             mapstructProcessor    : "org.mapstruct:mapstruct-processor:$versions.mapstruct",
             awsS3                 : "com.amazonaws:aws-java-sdk-s3:$versions.aws",
             awsCloudFront         : "com.amazonaws:aws-java-sdk-cloudfront:$versions.aws",
+            springGraphiql        : "com.graphql-java-kickstart:graphiql-spring-boot-starter:$versions.springGraphiql",
+            springGraphql         : "com.graphql-java-kickstart:graphql-spring-boot-starter:$versions.springGraphql",
+            javaToolGraphql       : "com.graphql-java-kickstart:graphql-java-tools:$versions.springGraphql",
 
     ]
-
 }

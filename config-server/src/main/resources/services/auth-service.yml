@@ -1,21 +1,21 @@
 server:
-  port: 8091
+  port: ${ auth_service_port }
 
 spring:
   rabbitmq:
-    host: 34.116.240.199
-    port: 5672
-    username: BilgeAdamAdmin
-    password: BilgeAdam!**
+    host: ${ spring_rabbit_host }
+    port: ${ spring_rabbit_port }
+    username: ${ spring_rabbit_username }
+    password: ${ spring_rabbit_password }
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: BilgeAdam!**
-    url: jdbc:postgresql://34.118.86.223:5432/authdb
+    username: ${ auth_service_spring_postgres_username }
+    password: ${ auth_service_spring_postgres_password }
+    url: ${ auth_service_spring_postgres_url}
   zipkin:
     enabled: true
-    base-url: http://34.116.241.185:9411/
+    base-url:  ${ zipkin_base_url}
     service:
       name: auth-server
 
@@ -29,7 +29,7 @@ spring:
 
 
 myapplication:
-  userservice: ${MY-IP}:8090
+  userservice: ${auth_service_spring_postgres_myapplication_userservice}
 
 
 logging:

@@ -5,7 +5,7 @@ spring:
     web-application-type: reactive
   zipkin:
     enabled: true
-    base-url: http://34.116.241.185:9411/
+    base-url:  http://34.134.25.134:9411/
     service:
       name: api-gateway-service
   application:
