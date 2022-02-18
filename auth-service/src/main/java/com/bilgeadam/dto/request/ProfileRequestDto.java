@@ -5,21 +5,22 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.io.Serializable;
 
 
-
-@AllArgsConstructor @NoArgsConstructor @Builder @Data
-public class ProfileRequestDto {
-
-
-	long authId;
-	String firstName;
-	String lastName;
-	String email;
-	String birthDate;
-	String country;
-	String city;
-	String gender;
-	String about;
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+public class ProfileRequestDto implements Serializable {
+    long authid;
+    String firstname;
+    String lastname;
+    String email;
+    String birthdate;
+    String country;
+    String city;
+    String gender;
+    String about;
 
 }

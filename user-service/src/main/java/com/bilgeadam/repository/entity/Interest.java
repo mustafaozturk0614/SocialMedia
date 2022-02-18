@@ -9,11 +9,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@AllArgsConstructor @NoArgsConstructor @Builder @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
 @Document
 public class Interest {
-	@Id
-	String id;
-	String name;
-	List<String> userIdList;
+    @Id
+    String id;
+    String name;
+    List<String> useridList;
 }

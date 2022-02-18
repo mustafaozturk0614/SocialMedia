@@ -1,12 +1,9 @@
 package com.bilgeadam.language;
 
 public enum Language {
-	TR("tr"),
-	FR("fr"),
-	DE("de"),
-	EN("en");
+    TR,
+    FR,
+    DE,
+    EN
 
-	Language(String language) {
-
-	}
 }

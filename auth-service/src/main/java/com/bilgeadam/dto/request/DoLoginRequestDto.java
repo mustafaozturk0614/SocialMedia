@@ -9,12 +9,15 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@AllArgsConstructor @NoArgsConstructor @Builder @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
 public class DoLoginRequestDto {
-	@Email(message = "lütfen geçerli bir email adresi giriniz")
-	@NotNull(message = "Email adresi boş bırakılamaz")
-	String username;
-	@NotNull
-	@Size(min = 8,max = 32 ,message = "Şifre en az 8 karekter en falz 32 karakter olmalıdır")
-	String password;
+    @Email(message = "Lütfen geçerli bir email adresi giriniz")
+    @NotNull(message = "EMail adresi boş geçilemez")
+    String username;
+    @NotNull
+    @Size(max = 32,min = 8,message = "Email adresi Enaz 8 Karakter ve En fazla 32 karakter olabilir")
+    String password;
 }

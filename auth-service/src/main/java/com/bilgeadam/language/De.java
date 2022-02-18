@@ -1,5 +1,5 @@
 package com.bilgeadam.language;
 
-public class De extends AlLanguage {
-	public String Hello = "Hallo";
+public class De extends ALanguage {
+    public String Hello = "Hallo";
 }

@@ -11,12 +11,13 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LoginService {
 
-	private final AuthServiceManager authServiceManager;
+    private final AuthServiceManager authServiceManager;
 
-	public DoLoginResponseDto login(LoginDto dto) {
-
-	return 	authServiceManager.doLogin(DoLoginRequestDto.builder().username(dto.getEmail()).password(dto.getPassword()).build()).getBody();
-
-
-	}
+    public DoLoginResponseDto Login(LoginDto dto) {
+        return authServiceManager
+                .doLogin(DoLoginRequestDto.builder()
+                                    .username(dto.getEmail())
+                                    .password(dto.getPassword())
+                                    .build()).getBody();
+    }
 }

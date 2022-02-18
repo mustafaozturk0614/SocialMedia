@@ -143,13 +143,13 @@
 
                             <!--Login Form-->
                             <form name="Login_form" id='Login_form' action="/login"
-                                  method="post">
+                            method="post">
                                 <div class="row">
                                     <div class="form-group col-xs-12">
                                         <label for="my-email" class="sr-only">Email</label>
                                         <input id="my-email"
                                                class="form-control input-group-lg"
-                                               type="text" name="email" title="Enter Email"
+                                               type="text" name="username" title="Enter Email"
                                                placeholder="Your Email"/>
                                     </div>
                                 </div>
@@ -195,7 +195,7 @@
         resim.click();
     }
     const fileIn = document.getElementById('input_resim_id'); // input bileşeni, yani resmi seçtimiz bileşen
-    fileOut = document.getElementById('profile_resim_id');// resim bileşeni
+        fileOut = document.getElementById('profile_resim_id');// resim bileşeni
     const readUrl = event => {
         if(event.files && event.files[0]) {
             let reader = new FileReader();
