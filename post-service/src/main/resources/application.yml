@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      username: ${spirng_security_name}
+      password: ${spirng_security_password}
+      uri: ${spring_cloud_confg_uri}
+  config:
+    import: "configserver:"
+  application:
+    name: post-service

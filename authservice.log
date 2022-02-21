@@ -1,0 +1,44 @@
+2022-02-21 11:50:15.359  INFO [auth-server,,] 10464 --- [main] com.bilgeadam.AuthServiceSpring          : Starting AuthServiceSpring using Java 17.0.1 on musty-pc with PID 10464 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\auth-service\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
+2022-02-21 11:50:15.363 DEBUG [auth-server,,] 10464 --- [main] com.bilgeadam.AuthServiceSpring          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-21 11:50:15.363  INFO [auth-server,,] 10464 --- [main] com.bilgeadam.AuthServiceSpring          : No active profile set, falling back to default profiles: default
+2022-02-21 11:50:15.399  INFO [auth-server,,] 10464 --- [main] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888
+2022-02-21 11:50:15.400  INFO [auth-server,,] 10464 --- [main] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-02-21 11:50:17.247  INFO [auth-server,,] 10464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2022-02-21 11:50:17.357  INFO [auth-server,,] 10464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1956 ms
+2022-02-21 11:50:17.507  WARN [auth-server,,] 10464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-21 11:50:21.636 DEBUG [auth-server,,] 10464 --- [main] c.b.config.security.JwtTokenFilter       : Filter 'getJwtTokenFilter' configured for use
+2022-02-21 11:50:23.908  INFO [auth-server,,] 10464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2022-02-21 11:50:23.993  INFO [auth-server,,] 10464 --- [main] com.bilgeadam.AuthServiceSpring          : Started AuthServiceSpring in 9.524 seconds (JVM running for 10.043)
+2022-02-21 11:51:24.382  INFO [auth-server,,] 14828 --- [main] com.bilgeadam.AuthServiceSpring          : Starting AuthServiceSpring using Java 17.0.1 on musty-pc with PID 14828 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\auth-service\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
+2022-02-21 11:51:24.384 DEBUG [auth-server,,] 14828 --- [main] com.bilgeadam.AuthServiceSpring          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-21 11:51:24.384  INFO [auth-server,,] 14828 --- [main] com.bilgeadam.AuthServiceSpring          : No active profile set, falling back to default profiles: default
+2022-02-21 11:51:24.414  INFO [auth-server,,] 14828 --- [main] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://localhost:8888
+2022-02-21 11:51:24.414  INFO [auth-server,,] 14828 --- [main] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-02-21 11:51:26.241  INFO [auth-server,,] 14828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2022-02-21 11:51:26.357  INFO [auth-server,,] 14828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1942 ms
+2022-02-21 11:51:26.508  WARN [auth-server,,] 14828 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-21 11:51:28.685 DEBUG [auth-server,,] 14828 --- [main] c.b.config.security.JwtTokenFilter       : Filter 'getJwtTokenFilter' configured for use
+2022-02-21 11:51:30.806  INFO [auth-server,,] 14828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2022-02-21 11:51:30.891  INFO [auth-server,,] 14828 --- [main] com.bilgeadam.AuthServiceSpring          : Started AuthServiceSpring in 7.419 seconds (JVM running for 7.936)
+2022-02-21 11:57:39.137  INFO [auth-server,,] 7804 --- [main] com.bilgeadam.AuthServiceSpring          : Starting AuthServiceSpring using Java 17.0.1 on musty-pc with PID 7804 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\auth-service\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
+2022-02-21 11:57:39.138 DEBUG [auth-server,,] 7804 --- [main] com.bilgeadam.AuthServiceSpring          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-21 11:57:39.138  INFO [auth-server,,] 7804 --- [main] com.bilgeadam.AuthServiceSpring          : No active profile set, falling back to default profiles: default
+2022-02-21 11:57:39.167  INFO [auth-server,,] 7804 --- [main] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://192.168.1.23:8888
+2022-02-21 11:57:39.167  INFO [auth-server,,] 7804 --- [main] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-02-21 11:57:41.070  INFO [auth-server,,] 7804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2022-02-21 11:57:41.187  INFO [auth-server,,] 7804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2019 ms
+2022-02-21 11:57:41.340  WARN [auth-server,,] 7804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-21 11:57:44.671 DEBUG [auth-server,,] 7804 --- [main] c.b.config.security.JwtTokenFilter       : Filter 'getJwtTokenFilter' configured for use
+2022-02-21 11:57:46.812  INFO [auth-server,,] 7804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2022-02-21 11:57:46.901  INFO [auth-server,,] 7804 --- [main] com.bilgeadam.AuthServiceSpring          : Started AuthServiceSpring in 8.699 seconds (JVM running for 9.281)
+2022-02-21 12:33:01.731  INFO [auth-server,,] 9680 --- [main] com.bilgeadam.AuthServiceSpring          : Starting AuthServiceSpring using Java 17.0.1 on musty-pc with PID 9680 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\auth-service\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
+2022-02-21 12:33:01.733 DEBUG [auth-server,,] 9680 --- [main] com.bilgeadam.AuthServiceSpring          : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-21 12:33:01.733  INFO [auth-server,,] 9680 --- [main] com.bilgeadam.AuthServiceSpring          : No active profile set, falling back to default profiles: default
+2022-02-21 12:33:01.762  INFO [auth-server,,] 9680 --- [main] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://192.168.1.23:8888
+2022-02-21 12:33:01.762  INFO [auth-server,,] 9680 --- [main] o.s.b.context.config.ConfigDataLoader    : Located environment: name=auth-service, profiles=[default], label=null, version=null, state=null
+2022-02-21 12:33:03.563  INFO [auth-server,,] 9680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8091 (http)
+2022-02-21 12:33:03.673  INFO [auth-server,,] 9680 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1910 ms
+2022-02-21 12:33:03.810  WARN [auth-server,,] 9680 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-21 12:33:05.999 DEBUG [auth-server,,] 9680 --- [main] c.b.config.security.JwtTokenFilter       : Filter 'getJwtTokenFilter' configured for use
+2022-02-21 12:33:08.152  INFO [auth-server,,] 9680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8091 (http) with context path ''
+2022-02-21 12:33:08.239  INFO [auth-server,,] 9680 --- [main] com.bilgeadam.AuthServiceSpring          : Started AuthServiceSpring in 7.348 seconds (JVM running for 7.833)

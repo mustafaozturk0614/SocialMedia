@@ -1,0 +1,7 @@
+2022-02-21 11:20:25.100  INFO [config-server,,] 6312 --- [main] com.bilgeadam.ConfigServer               : Starting ConfigServer using Java 17.0.1 on musty-pc with PID 6312 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\config-server\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
+2022-02-21 11:20:25.106 DEBUG [config-server,,] 6312 --- [main] com.bilgeadam.ConfigServer               : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-21 11:20:25.107  INFO [config-server,,] 6312 --- [main] com.bilgeadam.ConfigServer               : The following profiles are active: native
+2022-02-21 11:20:26.842  INFO [config-server,,] 6312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-02-21 11:20:26.934  INFO [config-server,,] 6312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1769 ms
+2022-02-21 11:20:28.444  INFO [config-server,,] 6312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-02-21 11:20:28.531  INFO [config-server,,] 6312 --- [main] com.bilgeadam.ConfigServer               : Started ConfigServer in 4.037 seconds (JVM running for 4.794)

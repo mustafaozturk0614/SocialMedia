@@ -1,0 +1,29 @@
+server:
+  port: 8092
+
+spring:
+
+  data:
+    mongodb:
+      database: ${user_service_spring_monogo_database}
+      username: ${user_service_spring_mongo_username}
+      password: ${user_service_spring_mongo_password}
+      host: ${user_service_spring_mongo_host}
+      port: ${user_service_spring_monogo_port}
+  rabbitmq:
+    host: ${spring_rabbit_host}
+    port: ${spring_rabbit_port}
+    username: ${spring_rabbit_username}
+    password: ${spring_rabbit_password}
+  zipkin:
+    enabled: true
+    base-url: ${zipkin_base_url}
+    service-name: post-service
+
+logging:
+  level:
+    root: warn
+    org.springframework.boot: info
+    com.bilgeadam: debug
+  file:
+    name: post.log

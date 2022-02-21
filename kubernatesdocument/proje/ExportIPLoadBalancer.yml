@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: exportiploadbalancer
+spec:
+  selector:
+    loadbalancer: loadpods
+
+  type: LoadBalancer
+  ports:
+    - name: elasticport-1
+      port: 9200
+      targetPort: 9200
+      protocol: TCP
+    - name: elasticport-2
+      port: 9300
+      targetPort: 9300
+      protocol: TCP
+    - name: mongodbport
+      port: 27017
+      targetPort: 27017
+      protocol: TCP
+    - name: postgresport
+      port: 5432
+      targetPort: 5432
+      protocol: TCP
+    - name: rabbitport-1
+      port: 5672
+      targetPort: 5672
+      protocol: TCP
+    - name: rabbitport-2
+      port: 15672
+      targetPort: 15672
+      protocol: TCP
+    - name: zipkin
+      port: 9411
+      targetPort: 9411
+      protocol: TCP
