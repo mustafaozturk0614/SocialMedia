@@ -17,8 +17,8 @@ subprojects{
     apply plugin: 'java'
     group = "com.bilgeadam"
     version= "v.1.0.0"
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
     }
@@ -36,15 +36,14 @@ allprojects {
     dependencies {
         implementation  libs.springBootWeb
         implementation  libs.lombok
+        implementation  libs.springOpenFeign
         annotationProcessor libs.lombok
-        implementation libs.springOpenFeign
         implementation  libs.springValidation
         implementation  libs.openapi
         implementation  libs.mapstruct
         annotationProcessor  libs.mapstructProcessor
-        implementation    libs.springCloudZipkin
-        implementation    libs.springCloudSleuth
-
+        implementation  libs.springCloudZipkin
+        implementation  libs.springCloudSleuth
     }
 }
 configurations {
@@ -52,4 +51,6 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
+
+
 

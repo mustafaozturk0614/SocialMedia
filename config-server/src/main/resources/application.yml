@@ -1,5 +1,6 @@
 server:
-  port: ${config_service_spring_port}
+  port: 8888
+
 spring:
   security:
     user:
@@ -17,16 +18,14 @@ spring:
   zipkin:
     enabled: true
     base-url: ${zipkin_base_url}
-    service:
-      name: config-server
-
-
-
+    service-name: config-server
 
 logging:
   level:
     root: warn
     org.springframework.boot: info
     com.bilgeadam: debug
+  ##  com.bilgeadam.controller: debug
   file:
-    name: configservice.log
+    name: configserver.log
+    ## path: \\server\\logs\\configserver\\

@@ -24,7 +24,7 @@ public class DoLoginResponseDto {
      * 200: Başarılı
      * 400: Hatalı
      * 410: Kullanıcı bulunamadı
-     * 411 token üretilemedi
+     * 411: token hatası
      * 500: Beklenmeyen hata
      */
     int error;

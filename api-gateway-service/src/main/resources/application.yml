@@ -1,20 +1,19 @@
 server:
-  port: 3333
+  port: ${apigateway_service_spring_port}
 spring:
   main:
     web-application-type: reactive
   zipkin:
     enabled: true
-    base-url:  http://34.134.25.134:9411/
-    service:
-      name: api-gateway-service
+    base-url: ${zipkin_base_url}
+    service-name: api-gateway-service
   application:
     name: api-gateway-service
   cloud:
     gateway:
       routes:
         - id: auth-service
-          uri: ${MY-IP-ADDRESS}:8091
+          uri: http://localhost:8091
           predicates:
             - Path=/v1/auth/**
           filters:
@@ -23,7 +22,7 @@ spring:
                 enabled: true
                 fallbackUri: forward:/fallback
         - id: user-service-follow
-          uri: ${MY-IP-ADDRESS}:8090
+          uri: http://localhost:8090
           predicates:
             - Path=/v1/follow/**
           filters:
@@ -32,7 +31,7 @@ spring:
                 enabled: true
                 fallbackUri: forward:/fallback
         - id: user-service-post
-          uri: ${MY-IP-ADDRESS}:8090
+          uri: http://localhost:8090
           predicates:
             - Path=/v1/post/**
           filters:
@@ -41,7 +40,7 @@ spring:
                 enabled: true
                 fallbackUri: forward:/fallback
         - id: user-service-user
-          uri: ${MY-IP-ADDRESS}:8090
+          uri: http://localhost:8090
           predicates:
             - Path=/v1/user/**
           filters:
@@ -50,7 +49,7 @@ spring:
                 enabled: true
                 fallbackUri: forward:/fallback
         - id: user-service-profile
-          uri: ${MY-IP-ADDRESS}:8090
+          uri: http://localhost:8090
           predicates:
             - Path=/v1/profile/**
           filters:
@@ -58,9 +57,8 @@ spring:
               args:
                 enabled: true
                 fallbackUri: forward:/fallback
-
         - id: web-service
-          uri: ${MY-IP-ADDRESS}:80
+          uri: http://localhost:80
           predicates:
             - Path=/web/**
           filters:
@@ -70,8 +68,6 @@ spring:
                 fallbackUri: forward:/fallback
             - RewritePath=/web/?(?<segment>.*), /$\{segment}
 
-
-
 logging:
   level:
     root: warn
@@ -79,4 +75,3 @@ logging:
     com.bilgeadam: debug
   file:
     name: apigatewayservice.log
-

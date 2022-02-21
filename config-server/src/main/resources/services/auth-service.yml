@@ -1,21 +1,21 @@
 server:
-  port: ${ auth_service_port }
+  port: ${auth_service_port}
 
 spring:
   rabbitmq:
-    host: ${ spring_rabbit_host }
-    port: ${ spring_rabbit_port }
-    username: ${ spring_rabbit_username }
-    password: ${ spring_rabbit_password }
+    host: ${spring_rabbit_host}
+    port: ${spring_rabbit_port}
+    username: ${spring_rabbit_username}
+    password: ${spring_rabbit_password}
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: ${ auth_service_spring_postgres_username }
-    password: ${ auth_service_spring_postgres_password }
-    url: ${ auth_service_spring_postgres_url}
+    username: ${auth_service_spring_postgres_username}
+    password: ${auth_service_spring_postgres_password}
+    url: ${auth_service_spring_postgres_url}
   zipkin:
     enabled: true
-    base-url:  ${ zipkin_base_url}
+    base-url:  ${zipkin_base_url}
     service:
       name: auth-server
 

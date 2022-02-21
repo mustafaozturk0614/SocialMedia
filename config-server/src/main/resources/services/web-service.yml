@@ -1,20 +1,16 @@
 server:
   port: ${web_service_spring_port}
 
+spring:
+  zipkin:
+    enabled: true
+    base-url: ${zipkin_base_url}
+    service-name: web-service
+
 s3:
   accesskey: ${aws_access_key}
   secretkey: ${aws_secret_key}
 
-spring:
-  security:
-    user:
-      name: ${spirng_security_name}
-      password: ${spirng_security_password}
-  zipkin:
-    enabled: true
-    base-url: ${zipkin_base_url}
-    service:
-      name: web-server
 
 logging:
   level:
