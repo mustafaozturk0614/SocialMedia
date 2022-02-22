@@ -46,13 +46,9 @@ public class UserService {
     public User saveReturnUser(RegisterRequestDto dto){
         User user = userMapper.toUser(dto);
         User result=  iUserRepository.save(user);
-        if(result==null){
-            return  null;
-        }else {
-            return  result.getPassword().length()>15 ? result :  null;
-        }
-//        this.clearCache();
-//        return result;
+
+    this.clearCache();
+      return result;
     }
 
     /**

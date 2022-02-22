@@ -1,6 +1,7 @@
 package com.bilgeadam.mapper;
 
 import com.bilgeadam.dto.request.ProfileRequestDto;
+import com.bilgeadam.rabbitmq.model.ProfileNotification;
 import com.bilgeadam.repository.entity.Profile;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -9,5 +10,6 @@ import org.mapstruct.ReportingPolicy;
 public interface ProfileMapper {
 
     Profile toProfile(ProfileRequestDto dto);
+    ProfileNotification toProfileNotification(ProfileRequestDto dto);
 
 }

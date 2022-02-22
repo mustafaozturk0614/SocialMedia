@@ -1,6 +1,0 @@
-2022-02-16 10:24:45.620  INFO [api-gateway-service,,] 12192 --- [main] com.bilgeadam.ApiGatewayService          : Starting ApiGatewayService using Java 17.0.1 on musty-pc with PID 12192 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\api-gateway-service\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
-2022-02-16 10:24:45.623 DEBUG [api-gateway-service,,] 12192 --- [main] com.bilgeadam.ApiGatewayService          : Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-02-16 10:24:45.623  INFO [api-gateway-service,,] 12192 --- [main] com.bilgeadam.ApiGatewayService          : No active profile set, falling back to default profiles: default
-2022-02-16 10:24:47.037  INFO [api-gateway-service,,] 12192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3333 (http)
-2022-02-16 10:24:49.425  INFO [api-gateway-service,,] 12192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3333 (http) with context path ''
-2022-02-16 10:24:49.655  INFO [api-gateway-service,,] 12192 --- [main] com.bilgeadam.ApiGatewayService          : Started ApiGatewayService in 4.641 seconds (JVM running for 5.147)

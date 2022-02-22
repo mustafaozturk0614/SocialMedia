@@ -30,6 +30,18 @@ public class Profile implements Serializable {
     List<Interest> interest;
     Education education;
     Work work;
+    /**
+     *  Profilin Gizlilik durmunu Tutar
+     */
+    boolean isHidden;
+    /**
+     * takip ettiklerim
+     */
+    int follow;
+    /**
+     * Beni takip edenler
+     */
+    int follower;
 
     @Document
     @Data

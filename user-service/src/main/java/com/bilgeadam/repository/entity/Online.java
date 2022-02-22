@@ -12,33 +12,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @Data
 @Document
-public class Post {
+/**
+ * kullanıcıların aktiflik durumunu ve son aktif olduğu zmanı tutar
+ */
+public class Online {
 	@Id
 	String id;
-	String title;
-	String content;
 	String userId;
-	String username;
-	String posMedia;
-	int like;
-	int dislike;
-	long  sharedTime;
-	Location location;
-
-
-
-	@Document
-	@AllArgsConstructor
-	@NoArgsConstructor
-	@Builder
-	@Data
-	public static class Location{
-		double lat;
-		double lng;
-		String address;
-	}
-
-
-
-
+	boolean isActive;
+	long lastActiveTime;
 }

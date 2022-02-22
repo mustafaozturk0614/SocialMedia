@@ -1,9 +1,0 @@
-2022-02-21 12:37:51.834  INFO [user-service,,] 5560 --- [main] com.bilgeadam.UserServiceSpring          : Starting UserServiceSpring using Java 17.0.1 on musty-pc with PID 5560 (E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia\user-service\build\classes\java\main started by musty in E:\bilge_adam\bilge_adam_workspace\IntelliJ\SocialMedia)
-2022-02-21 12:37:51.837 DEBUG [user-service,,] 5560 --- [main] com.bilgeadam.UserServiceSpring          : Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-02-21 12:37:51.838  INFO [user-service,,] 5560 --- [main] com.bilgeadam.UserServiceSpring          : No active profile set, falling back to default profiles: default
-2022-02-21 12:37:51.872  INFO [user-service,,] 5560 --- [main] o.s.b.context.config.ConfigDataLoader    : Fetching config from server at : http://192.168.1.23:8888
-2022-02-21 12:37:51.872  INFO [user-service,,] 5560 --- [main] o.s.b.context.config.ConfigDataLoader    : Located environment: name=user-service, profiles=[default], label=null, version=null, state=null
-2022-02-21 12:37:53.239  INFO [user-service,,] 5560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2022-02-21 12:37:53.332  INFO [user-service,,] 5560 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1459 ms
-2022-02-21 12:37:55.111  INFO [user-service,,] 5560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2022-02-21 12:37:56.962  INFO [user-service,,] 5560 --- [main] com.bilgeadam.UserServiceSpring          : Started UserServiceSpring in 5.735 seconds (JVM running for 6.202)

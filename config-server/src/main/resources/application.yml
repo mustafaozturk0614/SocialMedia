@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: ${config_service_spring_port}
 
 spring:
   security:

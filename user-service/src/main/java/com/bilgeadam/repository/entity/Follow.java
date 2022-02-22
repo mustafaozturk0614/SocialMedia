@@ -12,33 +12,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @Data
 @Document
-public class Post {
+public class Follow {
 	@Id
 	String id;
-	String title;
-	String content;
+	/*
+	takip eden
+	 */
 	String userId;
-	String username;
-	String posMedia;
-	int like;
-	int dislike;
-	long  sharedTime;
-	Location location;
-
-
-
-	@Document
-	@AllArgsConstructor
-	@NoArgsConstructor
-	@Builder
-	@Data
-	public static class Location{
-		double lat;
-		double lng;
-		String address;
-	}
-
-
+	/**
+	 * Takip edilen
+	 *
+	 */
+	String followId;
 
 
 }

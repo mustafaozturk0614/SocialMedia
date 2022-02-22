@@ -1,5 +1,5 @@
 server:
-  port: 8092
+  port: ${port_service_port}
 
 spring:
 
@@ -27,3 +27,7 @@ logging:
     com.bilgeadam: debug
   file:
     name: post.log
+
+s3:
+  accesskey: ${aws_access_key}
+  secretkey: ${aws_secret_key}
