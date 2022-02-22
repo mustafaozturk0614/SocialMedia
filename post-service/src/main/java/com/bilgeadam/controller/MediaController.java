@@ -25,7 +25,7 @@ public class MediaController {
 	@PostMapping(value= UPLOADFILE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
 		Optional<String> result = mediaService.uploadMedia(file);
-		if (result.isPresent()) {
+		if (result.isPresent()) {//
 			return ResponseEntity.ok(result.get());
 		}
 		return ResponseEntity.ok("");
