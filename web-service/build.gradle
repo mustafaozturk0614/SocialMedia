@@ -10,5 +10,6 @@ dependencies {
     implementation   libs.awsCloudFront
     implementation   libs.springSecurity
     implementation   libs.springCloudClientConfig
+    implementation    libs.googleCloud
 }
 

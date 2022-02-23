@@ -19,7 +19,7 @@ String content;
 String userId;
 String postId;
 String username;
-long createdDate;
+long sharedTime;
 int like;
 int dislike;
 

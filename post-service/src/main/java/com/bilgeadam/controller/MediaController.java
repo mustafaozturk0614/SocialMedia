@@ -1,7 +1,9 @@
 package com.bilgeadam.controller;
 
 import com.bilgeadam.service.MediaService;
+import com.google.cloud.storage.Storage;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,12 +24,13 @@ public class MediaController {
 
 	private final MediaService mediaService;
 
+	@Autowired
+	Storage storage;
+
 	@PostMapping(value= UPLOADFILE, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
-		Optional<String> result = mediaService.uploadMedia(file);
-		if (result.isPresent()) {//
-			return ResponseEntity.ok(result.get());
-		}
-		return ResponseEntity.ok("");
+		Optional<String> result = mediaService.uploadMediaGoogle(file);
+		return ResponseEntity.ok(result.get());
 	}
+
 }

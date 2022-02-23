@@ -1,6 +1,7 @@
 server:
   port: ${config_service_spring_port}
 
+
 spring:
   security:
     user:

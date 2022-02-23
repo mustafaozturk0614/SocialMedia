@@ -19,7 +19,7 @@ public class Post {
 	String content;
 	String userId;
 	String username;
-	String posMedia;
+	String postmediaurl;
 	int like;
 	int dislike;
 	long  sharedTime;

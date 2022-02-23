@@ -1,5 +1,6 @@
 package com.bilgeadam.dto.request;
 
+import com.bilgeadam.repository.entity.Post;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,11 +12,13 @@ import lombok.NoArgsConstructor;
 @Data
 public class SavePostDto {
 
-	String userid;
+	String userId;
 	String username;
 	String content;
-	String imagename;
-	double lat;
-	double lng;
-	String address;
+	String postmediaurl;
+	Post.Location location;
+
+
+
+
 }

@@ -1,5 +1,16 @@
 server:
   port: ${port_service_port}
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+
+myproject:
+  google:
+    cloud:
+      bucketname: ${google_bucket_name}
 
 spring:
 
